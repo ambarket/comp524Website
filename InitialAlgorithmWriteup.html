@@ -1,0 +1,1507 @@
+<html>
+<head>
+<title>Initial Algorithm Write Up</title>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<style type="text/css">
+.lst-kix_xp146zofsugl-2>li:before {
+	content: "" counter(lst-ctn-kix_xp146zofsugl-2, lower-roman) ". "
+}
+.lst-kix_gd64awj5m656-7>li {
+	counter-increment: lst-ctn-kix_gd64awj5m656-7
+}
+.lst-kix_xp146zofsugl-2>li {
+	counter-increment: lst-ctn-kix_xp146zofsugl-2
+}
+.lst-kix_xp146zofsugl-0>li {
+	counter-increment: lst-ctn-kix_xp146zofsugl-0
+}
+.lst-kix_vcss4o98e1kx-8>li:before {
+	content: "" counter(lst-ctn-kix_vcss4o98e1kx-8, lower-roman) ". "
+}
+ol.lst-kix_1sh77oofk6si-1.start {
+	counter-reset: lst-ctn-kix_1sh77oofk6si-1 0
+}
+.lst-kix_gd64awj5m656-8>li {
+	counter-increment: lst-ctn-kix_gd64awj5m656-8
+}
+.lst-kix_1sh77oofk6si-8>li:before {
+	content: "" counter(lst-ctn-kix_1sh77oofk6si-8, lower-roman) ". "
+}
+.lst-kix_xp146zofsugl-5>li {
+	counter-increment: lst-ctn-kix_xp146zofsugl-5
+}
+ol.lst-kix_s0rtrjrn3fih-0.start {
+	counter-reset: lst-ctn-kix_s0rtrjrn3fih-0 0
+}
+.lst-kix_uzinwce9ko7-1>li:before {
+	content: "" counter(lst-ctn-kix_uzinwce9ko7-1, lower-latin) ". "
+}
+.lst-kix_gd64awj5m656-3>li:before {
+	content: "" counter(lst-ctn-kix_gd64awj5m656-3, decimal) ". "
+}
+.lst-kix_xp146zofsugl-1>li {
+	counter-increment: lst-ctn-kix_xp146zofsugl-1
+}
+.lst-kix_awmqxhv10twn-4>li:before {
+	content: "" counter(lst-ctn-kix_awmqxhv10twn-4, lower-latin) ". "
+}
+.lst-kix_s0rtrjrn3fih-0>li {
+	counter-increment: lst-ctn-kix_s0rtrjrn3fih-0
+}
+.lst-kix_awmqxhv10twn-6>li {
+	counter-increment: lst-ctn-kix_awmqxhv10twn-6
+}
+.lst-kix_diqhvomtzrki-0>li:before {
+	content: "" counter(lst-ctn-kix_diqhvomtzrki-0, decimal) ". "
+}
+ol.lst-kix_vcss4o98e1kx-0.start {
+	counter-reset: lst-ctn-kix_vcss4o98e1kx-0 0
+}
+.lst-kix_awmqxhv10twn-0>li {
+	counter-increment: lst-ctn-kix_awmqxhv10twn-0
+}
+.lst-kix_4ye8h1scvkhq-0>li:before {
+	content: "" counter(lst-ctn-kix_4ye8h1scvkhq-0, decimal) ". "
+}
+.lst-kix_diqhvomtzrki-2>li {
+	counter-increment: lst-ctn-kix_diqhvomtzrki-2
+}
+.lst-kix_awmqxhv10twn-7>li {
+	counter-increment: lst-ctn-kix_awmqxhv10twn-7
+}
+.lst-kix_diqhvomtzrki-7>li:before {
+	content: "" counter(lst-ctn-kix_diqhvomtzrki-7, lower-latin) ". "
+}
+.lst-kix_vcss4o98e1kx-1>li:before {
+	content: "" counter(lst-ctn-kix_vcss4o98e1kx-1, lower-latin) ". "
+}
+ol.lst-kix_diqhvomtzrki-2.start {
+	counter-reset: lst-ctn-kix_diqhvomtzrki-2 0
+}
+.lst-kix_uzinwce9ko7-3>li:before {
+	content: "" counter(lst-ctn-kix_uzinwce9ko7-3, decimal) ". "
+}
+ol.lst-kix_diqhvomtzrki-7.start {
+	counter-reset: lst-ctn-kix_diqhvomtzrki-7 0
+}
+ol.lst-kix_4lzsqi76z49q-0.start {
+	counter-reset: lst-ctn-kix_4lzsqi76z49q-0 0
+}
+.lst-kix_vcss4o98e1kx-2>li:before {
+	content: "" counter(lst-ctn-kix_vcss4o98e1kx-2, lower-roman) ". "
+}
+.lst-kix_1sh77oofk6si-4>li {
+	counter-increment: lst-ctn-kix_1sh77oofk6si-4
+}
+.lst-kix_diqhvomtzrki-3>li:before {
+	content: "" counter(lst-ctn-kix_diqhvomtzrki-3, decimal) ". "
+}
+ol.lst-kix_gd64awj5m656-6.start {
+	counter-reset: lst-ctn-kix_gd64awj5m656-6 0
+}
+ol.lst-kix_uzinwce9ko7-4 {
+	list-style-type: none
+}
+ol.lst-kix_uzinwce9ko7-5 {
+	list-style-type: none
+}
+ol.lst-kix_awmqxhv10twn-5.start {
+	counter-reset: lst-ctn-kix_awmqxhv10twn-5 0
+}
+ol.lst-kix_uzinwce9ko7-2 {
+	list-style-type: none
+}
+ol.lst-kix_uzinwce9ko7-3 {
+	list-style-type: none
+}
+ol.lst-kix_uzinwce9ko7-8 {
+	list-style-type: none
+}
+ol.lst-kix_uzinwce9ko7-6 {
+	list-style-type: none
+}
+ol.lst-kix_uzinwce9ko7-7 {
+	list-style-type: none
+}
+ol.lst-kix_4ye8h1scvkhq-6.start {
+	counter-reset: lst-ctn-kix_4ye8h1scvkhq-6 0
+}
+.lst-kix_4ye8h1scvkhq-6>li {
+	counter-increment: lst-ctn-kix_4ye8h1scvkhq-6
+}
+ol.lst-kix_uzinwce9ko7-0 {
+	list-style-type: none
+}
+ol.lst-kix_uzinwce9ko7-1 {
+	list-style-type: none
+}
+.lst-kix_xp146zofsugl-8>li:before {
+	content: "" counter(lst-ctn-kix_xp146zofsugl-8, lower-roman) ". "
+}
+.lst-kix_uzinwce9ko7-7>li:before {
+	content: "" counter(lst-ctn-kix_uzinwce9ko7-7, lower-latin) ". "
+}
+ol.lst-kix_vcss4o98e1kx-8 {
+	list-style-type: none
+}
+.lst-kix_diqhvomtzrki-6>li {
+	counter-increment: lst-ctn-kix_diqhvomtzrki-6
+}
+ol.lst-kix_vcss4o98e1kx-7 {
+	list-style-type: none
+}
+ol.lst-kix_gd64awj5m656-7.start {
+	counter-reset: lst-ctn-kix_gd64awj5m656-7 0
+}
+ol.lst-kix_vcss4o98e1kx-1.start {
+	counter-reset: lst-ctn-kix_vcss4o98e1kx-1 0
+}
+ol.lst-kix_4ye8h1scvkhq-8 {
+	list-style-type: none
+}
+ol.lst-kix_4ye8h1scvkhq-4 {
+	list-style-type: none
+}
+ol.lst-kix_4ye8h1scvkhq-5 {
+	list-style-type: none
+}
+.lst-kix_vcss4o98e1kx-3>li:before {
+	content: "" counter(lst-ctn-kix_vcss4o98e1kx-3, decimal) ". "
+}
+ol.lst-kix_4ye8h1scvkhq-6 {
+	list-style-type: none
+}
+ol.lst-kix_4ye8h1scvkhq-7 {
+	list-style-type: none
+}
+ol.lst-kix_4ye8h1scvkhq-0 {
+	list-style-type: none
+}
+ol.lst-kix_4ye8h1scvkhq-1 {
+	list-style-type: none
+}
+ol.lst-kix_4ye8h1scvkhq-2 {
+	list-style-type: none
+}
+ol.lst-kix_gd64awj5m656-0 {
+	list-style-type: none
+}
+ol.lst-kix_4ye8h1scvkhq-3 {
+	list-style-type: none
+}
+.lst-kix_s0rtrjrn3fih-5>li {
+	counter-increment: lst-ctn-kix_s0rtrjrn3fih-5
+}
+ol.lst-kix_uzinwce9ko7-4.start {
+	counter-reset: lst-ctn-kix_uzinwce9ko7-4 0
+}
+.lst-kix_awmqxhv10twn-1>li {
+	counter-increment: lst-ctn-kix_awmqxhv10twn-1
+}
+.lst-kix_s0rtrjrn3fih-2>li:before {
+	content: "" counter(lst-ctn-kix_s0rtrjrn3fih-2, lower-roman) ". "
+}
+.lst-kix_cyih6ec3xvse-8>li:before {
+	content: "\0025a0  "
+}
+.lst-kix_4lzsqi76z49q-0>li {
+	counter-increment: lst-ctn-kix_4lzsqi76z49q-0
+}
+.lst-kix_4lzsqi76z49q-4>li {
+	counter-increment: lst-ctn-kix_4lzsqi76z49q-4
+}
+ol.lst-kix_xp146zofsugl-2.start {
+	counter-reset: lst-ctn-kix_xp146zofsugl-2 0
+}
+ol.lst-kix_uzinwce9ko7-1.start {
+	counter-reset: lst-ctn-kix_uzinwce9ko7-1 0
+}
+.lst-kix_s0rtrjrn3fih-3>li {
+	counter-increment: lst-ctn-kix_s0rtrjrn3fih-3
+}
+ol.lst-kix_vcss4o98e1kx-0 {
+	list-style-type: none
+}
+ol.lst-kix_vcss4o98e1kx-1 {
+	list-style-type: none
+}
+ol.lst-kix_vcss4o98e1kx-2 {
+	list-style-type: none
+}
+ol.lst-kix_vcss4o98e1kx-3 {
+	list-style-type: none
+}
+ol.lst-kix_vcss4o98e1kx-4 {
+	list-style-type: none
+}
+ol.lst-kix_vcss4o98e1kx-5 {
+	list-style-type: none
+}
+ol.lst-kix_awmqxhv10twn-4.start {
+	counter-reset: lst-ctn-kix_awmqxhv10twn-4 0
+}
+ol.lst-kix_vcss4o98e1kx-6 {
+	list-style-type: none
+}
+.lst-kix_1sh77oofk6si-0>li {
+	counter-increment: lst-ctn-kix_1sh77oofk6si-0
+}
+ol.lst-kix_awmqxhv10twn-3.start {
+	counter-reset: lst-ctn-kix_awmqxhv10twn-3 0
+}
+.lst-kix_4ye8h1scvkhq-0>li {
+	counter-increment: lst-ctn-kix_4ye8h1scvkhq-0
+}
+.lst-kix_diqhvomtzrki-1>li {
+	counter-increment: lst-ctn-kix_diqhvomtzrki-1
+}
+.lst-kix_gd64awj5m656-1>li {
+	counter-increment: lst-ctn-kix_gd64awj5m656-1
+}
+.lst-kix_diqhvomtzrki-7>li {
+	counter-increment: lst-ctn-kix_diqhvomtzrki-7
+}
+.lst-kix_uzinwce9ko7-0>li:before {
+	content: "" counter(lst-ctn-kix_uzinwce9ko7-0, decimal) ". "
+}
+.lst-kix_s0rtrjrn3fih-8>li:before {
+	content: "" counter(lst-ctn-kix_s0rtrjrn3fih-8, lower-roman) ". "
+}
+ol.lst-kix_xp146zofsugl-3.start {
+	counter-reset: lst-ctn-kix_xp146zofsugl-3 0
+}
+ol.lst-kix_gd64awj5m656-8 {
+	list-style-type: none
+}
+ol.lst-kix_1sh77oofk6si-2.start {
+	counter-reset: lst-ctn-kix_1sh77oofk6si-2 0
+}
+.lst-kix_gd64awj5m656-3>li {
+	counter-increment: lst-ctn-kix_gd64awj5m656-3
+}
+ol.lst-kix_gd64awj5m656-7 {
+	list-style-type: none
+}
+ol.lst-kix_uzinwce9ko7-8.start {
+	counter-reset: lst-ctn-kix_uzinwce9ko7-8 0
+}
+ol.lst-kix_gd64awj5m656-6 {
+	list-style-type: none
+}
+ol.lst-kix_gd64awj5m656-5 {
+	list-style-type: none
+}
+ol.lst-kix_gd64awj5m656-4 {
+	list-style-type: none
+}
+ol.lst-kix_gd64awj5m656-3 {
+	list-style-type: none
+}
+ol.lst-kix_gd64awj5m656-2 {
+	list-style-type: none
+}
+ol.lst-kix_gd64awj5m656-1 {
+	list-style-type: none
+}
+.lst-kix_oamt51f74woh-8>li:before {
+	content: "\0025a0  "
+}
+.lst-kix_uzinwce9ko7-1>li {
+	counter-increment: lst-ctn-kix_uzinwce9ko7-1
+}
+.lst-kix_1sh77oofk6si-0>li:before {
+	content: "" counter(lst-ctn-kix_1sh77oofk6si-0, decimal) ". "
+}
+.lst-kix_awmqxhv10twn-2>li {
+	counter-increment: lst-ctn-kix_awmqxhv10twn-2
+}
+.lst-kix_xp146zofsugl-1>li:before {
+	content: "" counter(lst-ctn-kix_xp146zofsugl-1, lower-latin) ". "
+}
+.lst-kix_xp146zofsugl-0>li:before {
+	content: "" counter(lst-ctn-kix_xp146zofsugl-0, decimal) ". "
+}
+ol.lst-kix_1sh77oofk6si-7.start {
+	counter-reset: lst-ctn-kix_1sh77oofk6si-7 0
+}
+.lst-kix_1sh77oofk6si-7>li {
+	counter-increment: lst-ctn-kix_1sh77oofk6si-7
+}
+.lst-kix_vcss4o98e1kx-0>li:before {
+	content: "" counter(lst-ctn-kix_vcss4o98e1kx-0, decimal) ". "
+}
+ol.lst-kix_1sh77oofk6si-4.start {
+	counter-reset: lst-ctn-kix_1sh77oofk6si-4 0
+}
+.lst-kix_xp146zofsugl-3>li {
+	counter-increment: lst-ctn-kix_xp146zofsugl-3
+}
+.lst-kix_diqhvomtzrki-8>li {
+	counter-increment: lst-ctn-kix_diqhvomtzrki-8
+}
+.lst-kix_diqhvomtzrki-4>li:before {
+	content: "" counter(lst-ctn-kix_diqhvomtzrki-4, lower-latin) ". "
+}
+.lst-kix_4lzsqi76z49q-3>li {
+	counter-increment: lst-ctn-kix_4lzsqi76z49q-3
+}
+ol.lst-kix_1sh77oofk6si-5.start {
+	counter-reset: lst-ctn-kix_1sh77oofk6si-5 0
+}
+.lst-kix_uzinwce9ko7-8>li:before {
+	content: "" counter(lst-ctn-kix_uzinwce9ko7-8, lower-roman) ". "
+}
+.lst-kix_s0rtrjrn3fih-2>li {
+	counter-increment: lst-ctn-kix_s0rtrjrn3fih-2
+}
+.lst-kix_oamt51f74woh-3>li:before {
+	content: "\0025cf  "
+}
+.lst-kix_gd64awj5m656-0>li:before {
+	content: "" counter(lst-ctn-kix_gd64awj5m656-0, decimal) ". "
+}
+.lst-kix_gd64awj5m656-8>li:before {
+	content: "" counter(lst-ctn-kix_gd64awj5m656-8, lower-roman) ". "
+}
+ol.lst-kix_awmqxhv10twn-1.start {
+	counter-reset: lst-ctn-kix_awmqxhv10twn-1 0
+}
+ol.lst-kix_4ye8h1scvkhq-1.start {
+	counter-reset: lst-ctn-kix_4ye8h1scvkhq-1 0
+}
+.lst-kix_4ye8h1scvkhq-7>li:before {
+	content: "" counter(lst-ctn-kix_4ye8h1scvkhq-7, lower-latin) ". "
+}
+.lst-kix_vcss4o98e1kx-1>li {
+	counter-increment: lst-ctn-kix_vcss4o98e1kx-1
+}
+.lst-kix_4lzsqi76z49q-7>li {
+	counter-increment: lst-ctn-kix_4lzsqi76z49q-7
+}
+.lst-kix_cyih6ec3xvse-1>li:before {
+	content: "\0025cb  "
+}
+.lst-kix_awmqxhv10twn-0>li:before {
+	content: "" counter(lst-ctn-kix_awmqxhv10twn-0, decimal) ". "
+}
+ol.lst-kix_1sh77oofk6si-8.start {
+	counter-reset: lst-ctn-kix_1sh77oofk6si-8 0
+}
+ol.lst-kix_diqhvomtzrki-4.start {
+	counter-reset: lst-ctn-kix_diqhvomtzrki-4 0
+}
+.lst-kix_vcss4o98e1kx-8>li {
+	counter-increment: lst-ctn-kix_vcss4o98e1kx-8
+}
+.lst-kix_4lzsqi76z49q-6>li:before {
+	content: "" counter(lst-ctn-kix_4lzsqi76z49q-6, decimal) ". "
+}
+.lst-kix_s0rtrjrn3fih-8>li {
+	counter-increment: lst-ctn-kix_s0rtrjrn3fih-8
+}
+.lst-kix_gd64awj5m656-6>li:before {
+	content: "" counter(lst-ctn-kix_gd64awj5m656-6, decimal) ". "
+}
+.lst-kix_xp146zofsugl-8>li {
+	counter-increment: lst-ctn-kix_xp146zofsugl-8
+}
+.lst-kix_uzinwce9ko7-2>li:before {
+	content: "" counter(lst-ctn-kix_uzinwce9ko7-2, lower-roman) ". "
+}
+ol.lst-kix_4ye8h1scvkhq-2.start {
+	counter-reset: lst-ctn-kix_4ye8h1scvkhq-2 0
+}
+.lst-kix_1sh77oofk6si-5>li {
+	counter-increment: lst-ctn-kix_1sh77oofk6si-5
+}
+.lst-kix_4ye8h1scvkhq-4>li:before {
+	content: "" counter(lst-ctn-kix_4ye8h1scvkhq-4, lower-latin) ". "
+}
+.lst-kix_cyih6ec3xvse-7>li:before {
+	content: "\0025cb  "
+}
+ol.lst-kix_s0rtrjrn3fih-3.start {
+	counter-reset: lst-ctn-kix_s0rtrjrn3fih-3 0
+}
+.lst-kix_vcss4o98e1kx-7>li:before {
+	content: "" counter(lst-ctn-kix_vcss4o98e1kx-7, lower-latin) ". "
+}
+ol.lst-kix_uzinwce9ko7-3.start {
+	counter-reset: lst-ctn-kix_uzinwce9ko7-3 0
+}
+ol.lst-kix_diqhvomtzrki-8.start {
+	counter-reset: lst-ctn-kix_diqhvomtzrki-8 0
+}
+.lst-kix_uzinwce9ko7-7>li {
+	counter-increment: lst-ctn-kix_uzinwce9ko7-7
+}
+ol.lst-kix_uzinwce9ko7-0.start {
+	counter-reset: lst-ctn-kix_uzinwce9ko7-0 0
+}
+.lst-kix_xp146zofsugl-3>li:before {
+	content: "" counter(lst-ctn-kix_xp146zofsugl-3, decimal) ". "
+}
+.lst-kix_cyih6ec3xvse-6>li:before {
+	content: "\0025cf  "
+}
+.lst-kix_4lzsqi76z49q-6>li {
+	counter-increment: lst-ctn-kix_4lzsqi76z49q-6
+}
+.lst-kix_1sh77oofk6si-6>li {
+	counter-increment: lst-ctn-kix_1sh77oofk6si-6
+}
+.lst-kix_xp146zofsugl-4>li:before {
+	content: "" counter(lst-ctn-kix_xp146zofsugl-4, lower-latin) ". "
+}
+ol.lst-kix_s0rtrjrn3fih-2.start {
+	counter-reset: lst-ctn-kix_s0rtrjrn3fih-2 0
+}
+ol.lst-kix_vcss4o98e1kx-7.start {
+	counter-reset: lst-ctn-kix_vcss4o98e1kx-7 0
+}
+.lst-kix_4lzsqi76z49q-0>li:before {
+	content: "" counter(lst-ctn-kix_4lzsqi76z49q-0, decimal) ". "
+}
+.lst-kix_diqhvomtzrki-2>li:before {
+	content: "" counter(lst-ctn-kix_diqhvomtzrki-2, lower-roman) ". "
+}
+.lst-kix_diqhvomtzrki-5>li {
+	counter-increment: lst-ctn-kix_diqhvomtzrki-5
+}
+ol.lst-kix_diqhvomtzrki-6.start {
+	counter-reset: lst-ctn-kix_diqhvomtzrki-6 0
+}
+.lst-kix_xp146zofsugl-7>li:before {
+	content: "" counter(lst-ctn-kix_xp146zofsugl-7, lower-latin) ". "
+}
+ol.lst-kix_awmqxhv10twn-7.start {
+	counter-reset: lst-ctn-kix_awmqxhv10twn-7 0
+}
+ol.lst-kix_uzinwce9ko7-5.start {
+	counter-reset: lst-ctn-kix_uzinwce9ko7-5 0
+}
+ol.lst-kix_gd64awj5m656-4.start {
+	counter-reset: lst-ctn-kix_gd64awj5m656-4 0
+}
+.lst-kix_vcss4o98e1kx-7>li {
+	counter-increment: lst-ctn-kix_vcss4o98e1kx-7
+}
+.lst-kix_4lzsqi76z49q-1>li:before {
+	content: "" counter(lst-ctn-kix_4lzsqi76z49q-1, lower-latin) ". "
+}
+.lst-kix_4lzsqi76z49q-3>li:before {
+	content: "" counter(lst-ctn-kix_4lzsqi76z49q-3, decimal) ". "
+}
+.lst-kix_oamt51f74woh-4>li:before {
+	content: "\0025cb  "
+}
+.lst-kix_4ye8h1scvkhq-3>li:before {
+	content: "" counter(lst-ctn-kix_4ye8h1scvkhq-3, decimal) ". "
+}
+.lst-kix_4lzsqi76z49q-1>li {
+	counter-increment: lst-ctn-kix_4lzsqi76z49q-1
+}
+.lst-kix_xp146zofsugl-7>li {
+	counter-increment: lst-ctn-kix_xp146zofsugl-7
+}
+ol.lst-kix_4ye8h1scvkhq-4.start {
+	counter-reset: lst-ctn-kix_4ye8h1scvkhq-4 0
+}
+ol.lst-kix_vcss4o98e1kx-3.start {
+	counter-reset: lst-ctn-kix_vcss4o98e1kx-3 0
+}
+.lst-kix_uzinwce9ko7-6>li:before {
+	content: "" counter(lst-ctn-kix_uzinwce9ko7-6, decimal) ". "
+}
+.lst-kix_4lzsqi76z49q-2>li {
+	counter-increment: lst-ctn-kix_4lzsqi76z49q-2
+}
+.lst-kix_uzinwce9ko7-0>li {
+	counter-increment: lst-ctn-kix_uzinwce9ko7-0
+}
+ol.lst-kix_4lzsqi76z49q-6.start {
+	counter-reset: lst-ctn-kix_4lzsqi76z49q-6 0
+}
+.lst-kix_oamt51f74woh-5>li:before {
+	content: "\0025a0  "
+}
+.lst-kix_uzinwce9ko7-5>li {
+	counter-increment: lst-ctn-kix_uzinwce9ko7-5
+}
+.lst-kix_4lzsqi76z49q-2>li:before {
+	content: "" counter(lst-ctn-kix_4lzsqi76z49q-2, lower-roman) ". "
+}
+.lst-kix_diqhvomtzrki-3>li {
+	counter-increment: lst-ctn-kix_diqhvomtzrki-3
+}
+ol.lst-kix_diqhvomtzrki-0.start {
+	counter-reset: lst-ctn-kix_diqhvomtzrki-0 0
+}
+ol.lst-kix_s0rtrjrn3fih-5.start {
+	counter-reset: lst-ctn-kix_s0rtrjrn3fih-5 0
+}
+ol.lst-kix_diqhvomtzrki-1.start {
+	counter-reset: lst-ctn-kix_diqhvomtzrki-1 0
+}
+.lst-kix_gd64awj5m656-1>li:before {
+	content: "" counter(lst-ctn-kix_gd64awj5m656-1, lower-latin) ". "
+}
+ol.lst-kix_4lzsqi76z49q-4.start {
+	counter-reset: lst-ctn-kix_4lzsqi76z49q-4 0
+}
+.lst-kix_awmqxhv10twn-5>li {
+	counter-increment: lst-ctn-kix_awmqxhv10twn-5
+}
+ol.lst-kix_1sh77oofk6si-6.start {
+	counter-reset: lst-ctn-kix_1sh77oofk6si-6 0
+}
+.lst-kix_4ye8h1scvkhq-1>li {
+	counter-increment: lst-ctn-kix_4ye8h1scvkhq-1
+}
+.lst-kix_cyih6ec3xvse-3>li:before {
+	content: "\0025cf  "
+}
+.lst-kix_awmqxhv10twn-6>li:before {
+	content: "" counter(lst-ctn-kix_awmqxhv10twn-6, decimal) ". "
+}
+.lst-kix_xp146zofsugl-6>li {
+	counter-increment: lst-ctn-kix_xp146zofsugl-6
+}
+ol.lst-kix_uzinwce9ko7-6.start {
+	counter-reset: lst-ctn-kix_uzinwce9ko7-6 0
+}
+ol.lst-kix_diqhvomtzrki-3.start {
+	counter-reset: lst-ctn-kix_diqhvomtzrki-3 0
+}
+.lst-kix_gd64awj5m656-4>li:before {
+	content: "" counter(lst-ctn-kix_gd64awj5m656-4, lower-latin) ". "
+}
+ol.lst-kix_gd64awj5m656-5.start {
+	counter-reset: lst-ctn-kix_gd64awj5m656-5 0
+}
+ol.lst-kix_4lzsqi76z49q-8.start {
+	counter-reset: lst-ctn-kix_4lzsqi76z49q-8 0
+}
+ol.lst-kix_1sh77oofk6si-0.start {
+	counter-reset: lst-ctn-kix_1sh77oofk6si-0 0
+}
+.lst-kix_4ye8h1scvkhq-1>li:before {
+	content: "" counter(lst-ctn-kix_4ye8h1scvkhq-1, lower-latin) ". "
+}
+.lst-kix_1sh77oofk6si-1>li {
+	counter-increment: lst-ctn-kix_1sh77oofk6si-1
+}
+ol.lst-kix_s0rtrjrn3fih-6.start {
+	counter-reset: lst-ctn-kix_s0rtrjrn3fih-6 0
+}
+ol.lst-kix_xp146zofsugl-1.start {
+	counter-reset: lst-ctn-kix_xp146zofsugl-1 0
+}
+ol.lst-kix_xp146zofsugl-5.start {
+	counter-reset: lst-ctn-kix_xp146zofsugl-5 0
+}
+ol.lst-kix_xp146zofsugl-1 {
+	list-style-type: none
+}
+ol.lst-kix_xp146zofsugl-0 {
+	list-style-type: none
+}
+ol.lst-kix_xp146zofsugl-3 {
+	list-style-type: none
+}
+ol.lst-kix_xp146zofsugl-2 {
+	list-style-type: none
+}
+ol.lst-kix_xp146zofsugl-5 {
+	list-style-type: none
+}
+.lst-kix_4lzsqi76z49q-7>li:before {
+	content: "" counter(lst-ctn-kix_4lzsqi76z49q-7, lower-latin) ". "
+}
+ol.lst-kix_xp146zofsugl-4 {
+	list-style-type: none
+}
+ol.lst-kix_xp146zofsugl-7 {
+	list-style-type: none
+}
+ol.lst-kix_xp146zofsugl-6 {
+	list-style-type: none
+}
+.lst-kix_4lzsqi76z49q-8>li {
+	counter-increment: lst-ctn-kix_4lzsqi76z49q-8
+}
+.lst-kix_vcss4o98e1kx-2>li {
+	counter-increment: lst-ctn-kix_vcss4o98e1kx-2
+}
+ol.lst-kix_xp146zofsugl-8 {
+	list-style-type: none
+}
+.lst-kix_4ye8h1scvkhq-6>li:before {
+	content: "" counter(lst-ctn-kix_4ye8h1scvkhq-6, decimal) ". "
+}
+.lst-kix_awmqxhv10twn-8>li {
+	counter-increment: lst-ctn-kix_awmqxhv10twn-8
+}
+.lst-kix_1sh77oofk6si-4>li:before {
+	content: "" counter(lst-ctn-kix_1sh77oofk6si-4, lower-latin) ". "
+}
+.lst-kix_oamt51f74woh-1>li:before {
+	content: "\0025cb  "
+}
+.lst-kix_1sh77oofk6si-7>li:before {
+	content: "" counter(lst-ctn-kix_1sh77oofk6si-7, lower-latin) ". "
+}
+ol.lst-kix_4ye8h1scvkhq-5.start {
+	counter-reset: lst-ctn-kix_4ye8h1scvkhq-5 0
+}
+.lst-kix_uzinwce9ko7-6>li {
+	counter-increment: lst-ctn-kix_uzinwce9ko7-6
+}
+.lst-kix_4ye8h1scvkhq-4>li {
+	counter-increment: lst-ctn-kix_4ye8h1scvkhq-4
+}
+ol.lst-kix_awmqxhv10twn-0.start {
+	counter-reset: lst-ctn-kix_awmqxhv10twn-0 0
+}
+ol.lst-kix_4lzsqi76z49q-3.start {
+	counter-reset: lst-ctn-kix_4lzsqi76z49q-3 0
+}
+.lst-kix_s0rtrjrn3fih-0>li:before {
+	content: "" counter(lst-ctn-kix_s0rtrjrn3fih-0, decimal) ". "
+}
+.lst-kix_vcss4o98e1kx-0>li {
+	counter-increment: lst-ctn-kix_vcss4o98e1kx-0
+}
+.lst-kix_1sh77oofk6si-1>li:before {
+	content: "" counter(lst-ctn-kix_1sh77oofk6si-1, lower-latin) ". "
+}
+.lst-kix_4ye8h1scvkhq-2>li {
+	counter-increment: lst-ctn-kix_4ye8h1scvkhq-2
+}
+.lst-kix_vcss4o98e1kx-4>li {
+	counter-increment: lst-ctn-kix_vcss4o98e1kx-4
+}
+.lst-kix_4ye8h1scvkhq-5>li:before {
+	content: "" counter(lst-ctn-kix_4ye8h1scvkhq-5, lower-roman) ". "
+}
+.lst-kix_uzinwce9ko7-8>li {
+	counter-increment: lst-ctn-kix_uzinwce9ko7-8
+}
+.lst-kix_awmqxhv10twn-5>li:before {
+	content: "" counter(lst-ctn-kix_awmqxhv10twn-5, lower-roman) ". "
+}
+.lst-kix_uzinwce9ko7-4>li:before {
+	content: "" counter(lst-ctn-kix_uzinwce9ko7-4, lower-latin) ". "
+}
+ul.lst-kix_oamt51f74woh-2 {
+	list-style-type: none
+}
+ol.lst-kix_awmqxhv10twn-2.start {
+	counter-reset: lst-ctn-kix_awmqxhv10twn-2 0
+}
+ol.lst-kix_awmqxhv10twn-8.start {
+	counter-reset: lst-ctn-kix_awmqxhv10twn-8 0
+}
+ul.lst-kix_oamt51f74woh-1 {
+	list-style-type: none
+}
+ul.lst-kix_oamt51f74woh-0 {
+	list-style-type: none
+}
+ul.lst-kix_oamt51f74woh-6 {
+	list-style-type: none
+}
+ul.lst-kix_oamt51f74woh-5 {
+	list-style-type: none
+}
+ul.lst-kix_oamt51f74woh-4 {
+	list-style-type: none
+}
+.lst-kix_xp146zofsugl-5>li:before {
+	content: "" counter(lst-ctn-kix_xp146zofsugl-5, lower-roman) ". "
+}
+ul.lst-kix_oamt51f74woh-3 {
+	list-style-type: none
+}
+.lst-kix_vcss4o98e1kx-6>li {
+	counter-increment: lst-ctn-kix_vcss4o98e1kx-6
+}
+ul.lst-kix_oamt51f74woh-8 {
+	list-style-type: none
+}
+ul.lst-kix_oamt51f74woh-7 {
+	list-style-type: none
+}
+ol.lst-kix_4lzsqi76z49q-0 {
+	list-style-type: none
+}
+.lst-kix_4lzsqi76z49q-5>li:before {
+	content: "" counter(lst-ctn-kix_4lzsqi76z49q-5, lower-roman) ". "
+}
+ol.lst-kix_4lzsqi76z49q-1 {
+	list-style-type: none
+}
+ol.lst-kix_4lzsqi76z49q-2 {
+	list-style-type: none
+}
+ol.lst-kix_4lzsqi76z49q-3 {
+	list-style-type: none
+}
+.lst-kix_s0rtrjrn3fih-6>li:before {
+	content: "" counter(lst-ctn-kix_s0rtrjrn3fih-6, decimal) ". "
+}
+ol.lst-kix_4lzsqi76z49q-4 {
+	list-style-type: none
+}
+.lst-kix_s0rtrjrn3fih-6>li {
+	counter-increment: lst-ctn-kix_s0rtrjrn3fih-6
+}
+ol.lst-kix_4lzsqi76z49q-5 {
+	list-style-type: none
+}
+.lst-kix_oamt51f74woh-2>li:before {
+	content: "\0025a0  "
+}
+ol.lst-kix_4lzsqi76z49q-6 {
+	list-style-type: none
+}
+ol.lst-kix_4lzsqi76z49q-7 {
+	list-style-type: none
+}
+.lst-kix_4ye8h1scvkhq-3>li {
+	counter-increment: lst-ctn-kix_4ye8h1scvkhq-3
+}
+ol.lst-kix_4lzsqi76z49q-8 {
+	list-style-type: none
+}
+ol.lst-kix_xp146zofsugl-8.start {
+	counter-reset: lst-ctn-kix_xp146zofsugl-8 0
+}
+ol.lst-kix_4ye8h1scvkhq-3.start {
+	counter-reset: lst-ctn-kix_4ye8h1scvkhq-3 0
+}
+.lst-kix_oamt51f74woh-7>li:before {
+	content: "\0025cb  "
+}
+.lst-kix_awmqxhv10twn-3>li {
+	counter-increment: lst-ctn-kix_awmqxhv10twn-3
+}
+ol.lst-kix_4ye8h1scvkhq-8.start {
+	counter-reset: lst-ctn-kix_4ye8h1scvkhq-8 0
+}
+.lst-kix_4lzsqi76z49q-4>li:before {
+	content: "" counter(lst-ctn-kix_4lzsqi76z49q-4, lower-latin) ". "
+}
+.lst-kix_awmqxhv10twn-8>li:before {
+	content: "" counter(lst-ctn-kix_awmqxhv10twn-8, lower-roman) ". "
+}
+ol.lst-kix_xp146zofsugl-7.start {
+	counter-reset: lst-ctn-kix_xp146zofsugl-7 0
+}
+.lst-kix_4lzsqi76z49q-5>li {
+	counter-increment: lst-ctn-kix_4lzsqi76z49q-5
+}
+ol.lst-kix_4lzsqi76z49q-2.start {
+	counter-reset: lst-ctn-kix_4lzsqi76z49q-2 0
+}
+ol.lst-kix_vcss4o98e1kx-4.start {
+	counter-reset: lst-ctn-kix_vcss4o98e1kx-4 0
+}
+.lst-kix_s0rtrjrn3fih-3>li:before {
+	content: "" counter(lst-ctn-kix_s0rtrjrn3fih-3, decimal) ". "
+}
+.lst-kix_4ye8h1scvkhq-8>li {
+	counter-increment: lst-ctn-kix_4ye8h1scvkhq-8
+}
+.lst-kix_awmqxhv10twn-7>li:before {
+	content: "" counter(lst-ctn-kix_awmqxhv10twn-7, lower-latin) ". "
+}
+ol.lst-kix_4ye8h1scvkhq-0.start {
+	counter-reset: lst-ctn-kix_4ye8h1scvkhq-0 0
+}
+.lst-kix_vcss4o98e1kx-5>li {
+	counter-increment: lst-ctn-kix_vcss4o98e1kx-5
+}
+ol.lst-kix_s0rtrjrn3fih-8.start {
+	counter-reset: lst-ctn-kix_s0rtrjrn3fih-8 0
+}
+.lst-kix_diqhvomtzrki-6>li:before {
+	content: "" counter(lst-ctn-kix_diqhvomtzrki-6, decimal) ". "
+}
+.lst-kix_cyih6ec3xvse-4>li:before {
+	content: "\0025cb  "
+}
+.lst-kix_s0rtrjrn3fih-4>li {
+	counter-increment: lst-ctn-kix_s0rtrjrn3fih-4
+}
+ol.lst-kix_s0rtrjrn3fih-7.start {
+	counter-reset: lst-ctn-kix_s0rtrjrn3fih-7 0
+}
+.lst-kix_diqhvomtzrki-1>li:before {
+	content: "" counter(lst-ctn-kix_diqhvomtzrki-1, lower-latin) ". "
+}
+.lst-kix_vcss4o98e1kx-3>li {
+	counter-increment: lst-ctn-kix_vcss4o98e1kx-3
+}
+ol.lst-kix_vcss4o98e1kx-6.start {
+	counter-reset: lst-ctn-kix_vcss4o98e1kx-6 0
+}
+ol.lst-kix_awmqxhv10twn-8 {
+	list-style-type: none
+}
+ol.lst-kix_awmqxhv10twn-7 {
+	list-style-type: none
+}
+.lst-kix_1sh77oofk6si-2>li:before {
+	content: "" counter(lst-ctn-kix_1sh77oofk6si-2, lower-roman) ". "
+}
+.lst-kix_cyih6ec3xvse-2>li:before {
+	content: "\0025a0  "
+}
+.lst-kix_4ye8h1scvkhq-2>li:before {
+	content: "" counter(lst-ctn-kix_4ye8h1scvkhq-2, lower-roman) ". "
+}
+.lst-kix_1sh77oofk6si-8>li {
+	counter-increment: lst-ctn-kix_1sh77oofk6si-8
+}
+ol.lst-kix_xp146zofsugl-4.start {
+	counter-reset: lst-ctn-kix_xp146zofsugl-4 0
+}
+.lst-kix_1sh77oofk6si-2>li {
+	counter-increment: lst-ctn-kix_1sh77oofk6si-2
+}
+ol.lst-kix_4lzsqi76z49q-1.start {
+	counter-reset: lst-ctn-kix_4lzsqi76z49q-1 0
+}
+ol.lst-kix_diqhvomtzrki-5.start {
+	counter-reset: lst-ctn-kix_diqhvomtzrki-5 0
+}
+ul.lst-kix_cyih6ec3xvse-5 {
+	list-style-type: none
+}
+.lst-kix_oamt51f74woh-0>li:before {
+	content: "\0025cf  "
+}
+ul.lst-kix_cyih6ec3xvse-6 {
+	list-style-type: none
+}
+ul.lst-kix_cyih6ec3xvse-7 {
+	list-style-type: none
+}
+ul.lst-kix_cyih6ec3xvse-8 {
+	list-style-type: none
+}
+ol.lst-kix_uzinwce9ko7-7.start {
+	counter-reset: lst-ctn-kix_uzinwce9ko7-7 0
+}
+ul.lst-kix_cyih6ec3xvse-0 {
+	list-style-type: none
+}
+ul.lst-kix_cyih6ec3xvse-1 {
+	list-style-type: none
+}
+.lst-kix_vcss4o98e1kx-6>li:before {
+	content: "" counter(lst-ctn-kix_vcss4o98e1kx-6, decimal) ". "
+}
+ul.lst-kix_cyih6ec3xvse-2 {
+	list-style-type: none
+}
+ul.lst-kix_cyih6ec3xvse-3 {
+	list-style-type: none
+}
+ul.lst-kix_cyih6ec3xvse-4 {
+	list-style-type: none
+}
+.lst-kix_gd64awj5m656-5>li {
+	counter-increment: lst-ctn-kix_gd64awj5m656-5
+}
+.lst-kix_gd64awj5m656-4>li {
+	counter-increment: lst-ctn-kix_gd64awj5m656-4
+}
+ol.lst-kix_xp146zofsugl-6.start {
+	counter-reset: lst-ctn-kix_xp146zofsugl-6 0
+}
+ol.lst-kix_s0rtrjrn3fih-4.start {
+	counter-reset: lst-ctn-kix_s0rtrjrn3fih-4 0
+}
+ol.lst-kix_xp146zofsugl-0.start {
+	counter-reset: lst-ctn-kix_xp146zofsugl-0 0
+}
+ol.lst-kix_1sh77oofk6si-6 {
+	list-style-type: none
+}
+ol.lst-kix_1sh77oofk6si-7 {
+	list-style-type: none
+}
+ol.lst-kix_1sh77oofk6si-8 {
+	list-style-type: none
+}
+ol.lst-kix_uzinwce9ko7-2.start {
+	counter-reset: lst-ctn-kix_uzinwce9ko7-2 0
+}
+ol.lst-kix_s0rtrjrn3fih-1 {
+	list-style-type: none
+}
+.lst-kix_diqhvomtzrki-0>li {
+	counter-increment: lst-ctn-kix_diqhvomtzrki-0
+}
+ol.lst-kix_s0rtrjrn3fih-0 {
+	list-style-type: none
+}
+.lst-kix_4lzsqi76z49q-8>li:before {
+	content: "" counter(lst-ctn-kix_4lzsqi76z49q-8, lower-roman) ". "
+}
+.lst-kix_awmqxhv10twn-4>li {
+	counter-increment: lst-ctn-kix_awmqxhv10twn-4
+}
+ol.lst-kix_vcss4o98e1kx-5.start {
+	counter-reset: lst-ctn-kix_vcss4o98e1kx-5 0
+}
+.lst-kix_4ye8h1scvkhq-8>li:before {
+	content: "" counter(lst-ctn-kix_4ye8h1scvkhq-8, lower-roman) ". "
+}
+.lst-kix_awmqxhv10twn-1>li:before {
+	content: "" counter(lst-ctn-kix_awmqxhv10twn-1, lower-latin) ". "
+}
+.lst-kix_s0rtrjrn3fih-1>li {
+	counter-increment: lst-ctn-kix_s0rtrjrn3fih-1
+}
+.lst-kix_awmqxhv10twn-3>li:before {
+	content: "" counter(lst-ctn-kix_awmqxhv10twn-3, decimal) ". "
+}
+.lst-kix_vcss4o98e1kx-5>li:before {
+	content: "" counter(lst-ctn-kix_vcss4o98e1kx-5, lower-roman) ". "
+}
+.lst-kix_awmqxhv10twn-2>li:before {
+	content: "" counter(lst-ctn-kix_awmqxhv10twn-2, lower-roman) ". "
+}
+.lst-kix_s0rtrjrn3fih-1>li:before {
+	content: "" counter(lst-ctn-kix_s0rtrjrn3fih-1, lower-latin) ". "
+}
+ol.lst-kix_s0rtrjrn3fih-2 {
+	list-style-type: none
+}
+ol.lst-kix_s0rtrjrn3fih-3 {
+	list-style-type: none
+}
+ol.lst-kix_vcss4o98e1kx-8.start {
+	counter-reset: lst-ctn-kix_vcss4o98e1kx-8 0
+}
+ol.lst-kix_s0rtrjrn3fih-4 {
+	list-style-type: none
+}
+.lst-kix_4ye8h1scvkhq-5>li {
+	counter-increment: lst-ctn-kix_4ye8h1scvkhq-5
+}
+ol.lst-kix_s0rtrjrn3fih-5 {
+	list-style-type: none
+}
+ol.lst-kix_s0rtrjrn3fih-6 {
+	list-style-type: none
+}
+ol.lst-kix_s0rtrjrn3fih-7 {
+	list-style-type: none
+}
+.lst-kix_xp146zofsugl-4>li {
+	counter-increment: lst-ctn-kix_xp146zofsugl-4
+}
+ol.lst-kix_s0rtrjrn3fih-8 {
+	list-style-type: none
+}
+ol.lst-kix_s0rtrjrn3fih-1.start {
+	counter-reset: lst-ctn-kix_s0rtrjrn3fih-1 0
+}
+.lst-kix_oamt51f74woh-6>li:before {
+	content: "\0025cf  "
+}
+ol.lst-kix_4lzsqi76z49q-5.start {
+	counter-reset: lst-ctn-kix_4lzsqi76z49q-5 0
+}
+ol.lst-kix_awmqxhv10twn-0 {
+	list-style-type: none
+}
+ol.lst-kix_awmqxhv10twn-1 {
+	list-style-type: none
+}
+ol.lst-kix_gd64awj5m656-1.start {
+	counter-reset: lst-ctn-kix_gd64awj5m656-1 0
+}
+ol.lst-kix_awmqxhv10twn-2 {
+	list-style-type: none
+}
+ol.lst-kix_awmqxhv10twn-3 {
+	list-style-type: none
+}
+ol.lst-kix_awmqxhv10twn-4 {
+	list-style-type: none
+}
+ol.lst-kix_awmqxhv10twn-5 {
+	list-style-type: none
+}
+ol.lst-kix_awmqxhv10twn-6 {
+	list-style-type: none
+}
+.lst-kix_uzinwce9ko7-3>li {
+	counter-increment: lst-ctn-kix_uzinwce9ko7-3
+}
+.lst-kix_cyih6ec3xvse-5>li:before {
+	content: "\0025a0  "
+}
+.lst-kix_1sh77oofk6si-3>li {
+	counter-increment: lst-ctn-kix_1sh77oofk6si-3
+}
+.lst-kix_diqhvomtzrki-4>li {
+	counter-increment: lst-ctn-kix_diqhvomtzrki-4
+}
+.lst-kix_s0rtrjrn3fih-7>li:before {
+	content: "" counter(lst-ctn-kix_s0rtrjrn3fih-7, lower-latin) ". "
+}
+.lst-kix_vcss4o98e1kx-4>li:before {
+	content: "" counter(lst-ctn-kix_vcss4o98e1kx-4, lower-latin) ". "
+}
+.lst-kix_gd64awj5m656-6>li {
+	counter-increment: lst-ctn-kix_gd64awj5m656-6
+}
+.lst-kix_uzinwce9ko7-4>li {
+	counter-increment: lst-ctn-kix_uzinwce9ko7-4
+}
+ol.lst-kix_vcss4o98e1kx-2.start {
+	counter-reset: lst-ctn-kix_vcss4o98e1kx-2 0
+}
+.lst-kix_1sh77oofk6si-5>li:before {
+	content: "" counter(lst-ctn-kix_1sh77oofk6si-5, lower-roman) ". "
+}
+ol.lst-kix_4ye8h1scvkhq-7.start {
+	counter-reset: lst-ctn-kix_4ye8h1scvkhq-7 0
+}
+ol.lst-kix_gd64awj5m656-0.start {
+	counter-reset: lst-ctn-kix_gd64awj5m656-0 0
+}
+.lst-kix_4ye8h1scvkhq-7>li {
+	counter-increment: lst-ctn-kix_4ye8h1scvkhq-7
+}
+.lst-kix_diqhvomtzrki-5>li:before {
+	content: "" counter(lst-ctn-kix_diqhvomtzrki-5, lower-roman) ". "
+}
+ol.lst-kix_1sh77oofk6si-4 {
+	list-style-type: none
+}
+ol.lst-kix_1sh77oofk6si-5 {
+	list-style-type: none
+}
+.lst-kix_1sh77oofk6si-3>li:before {
+	content: "" counter(lst-ctn-kix_1sh77oofk6si-3, decimal) ". "
+}
+ol.lst-kix_1sh77oofk6si-2 {
+	list-style-type: none
+}
+ol.lst-kix_1sh77oofk6si-3 {
+	list-style-type: none
+}
+ol.lst-kix_1sh77oofk6si-0 {
+	list-style-type: none
+}
+.lst-kix_gd64awj5m656-5>li:before {
+	content: "" counter(lst-ctn-kix_gd64awj5m656-5, lower-roman) ". "
+}
+ol.lst-kix_1sh77oofk6si-1 {
+	list-style-type: none
+}
+.lst-kix_gd64awj5m656-2>li:before {
+	content: "" counter(lst-ctn-kix_gd64awj5m656-2, lower-roman) ". "
+}
+.lst-kix_s0rtrjrn3fih-5>li:before {
+	content: "" counter(lst-ctn-kix_s0rtrjrn3fih-5, lower-roman) ". "
+}
+.lst-kix_uzinwce9ko7-2>li {
+	counter-increment: lst-ctn-kix_uzinwce9ko7-2
+}
+ol.lst-kix_diqhvomtzrki-8 {
+	list-style-type: none
+}
+ol.lst-kix_diqhvomtzrki-7 {
+	list-style-type: none
+}
+ol.lst-kix_diqhvomtzrki-6 {
+	list-style-type: none
+}
+.lst-kix_cyih6ec3xvse-0>li:before {
+	content: "\0025cf  "
+}
+ol.lst-kix_diqhvomtzrki-5 {
+	list-style-type: none
+}
+.lst-kix_gd64awj5m656-0>li {
+	counter-increment: lst-ctn-kix_gd64awj5m656-0
+}
+.lst-kix_uzinwce9ko7-5>li:before {
+	content: "" counter(lst-ctn-kix_uzinwce9ko7-5, lower-roman) ". "
+}
+.lst-kix_s0rtrjrn3fih-7>li {
+	counter-increment: lst-ctn-kix_s0rtrjrn3fih-7
+}
+.lst-kix_gd64awj5m656-7>li:before {
+	content: "" counter(lst-ctn-kix_gd64awj5m656-7, lower-latin) ". "
+}
+.lst-kix_1sh77oofk6si-6>li:before {
+	content: "" counter(lst-ctn-kix_1sh77oofk6si-6, decimal) ". "
+}
+ol.lst-kix_awmqxhv10twn-6.start {
+	counter-reset: lst-ctn-kix_awmqxhv10twn-6 0
+}
+ol.lst-kix_gd64awj5m656-2.start {
+	counter-reset: lst-ctn-kix_gd64awj5m656-2 0
+}
+ol.lst-kix_4lzsqi76z49q-7.start {
+	counter-reset: lst-ctn-kix_4lzsqi76z49q-7 0
+}
+ol.lst-kix_1sh77oofk6si-3.start {
+	counter-reset: lst-ctn-kix_1sh77oofk6si-3 0
+}
+ol.lst-kix_diqhvomtzrki-3 {
+	list-style-type: none
+}
+ol.lst-kix_diqhvomtzrki-4 {
+	list-style-type: none
+}
+ol.lst-kix_diqhvomtzrki-1 {
+	list-style-type: none
+}
+ol.lst-kix_diqhvomtzrki-2 {
+	list-style-type: none
+}
+ol.lst-kix_gd64awj5m656-3.start {
+	counter-reset: lst-ctn-kix_gd64awj5m656-3 0
+}
+ol.lst-kix_diqhvomtzrki-0 {
+	list-style-type: none
+}
+.lst-kix_xp146zofsugl-6>li:before {
+	content: "" counter(lst-ctn-kix_xp146zofsugl-6, decimal) ". "
+}
+.lst-kix_s0rtrjrn3fih-4>li:before {
+	content: "" counter(lst-ctn-kix_s0rtrjrn3fih-4, lower-latin) ". "
+}
+.lst-kix_diqhvomtzrki-8>li:before {
+	content: "" counter(lst-ctn-kix_diqhvomtzrki-8, lower-roman) ". "
+}
+ol.lst-kix_gd64awj5m656-8.start {
+	counter-reset: lst-ctn-kix_gd64awj5m656-8 0
+}
+.lst-kix_gd64awj5m656-2>li {
+	counter-increment: lst-ctn-kix_gd64awj5m656-2
+}
+ol {
+	margin: 0;
+	padding: 0
+}
+.c0 {
+	widows: 2;
+	orphans: 2;
+	direction: ltr
+}
+.c10 {
+	max-width: 468pt;
+	background-color: #ffffff;
+	padding: 72pt 72pt 72pt 72pt
+}
+.c3 {
+	margin: 0;
+	padding: 0
+}
+.c7 {
+	padding-left: 0pt;
+	margin-left: 72pt
+}
+.c6 {
+	padding-left: 0pt;
+	margin-left: 108pt
+}
+.c9 {
+	padding-left: 0pt;
+	margin-left: 144pt
+}
+.c8 {
+	padding-left: 0pt;
+	margin-left: 216pt
+}
+.c2 {
+	padding-left: 0pt;
+	margin-left: 36pt
+}
+.c4 {
+	padding-left: 0pt;
+	margin-left: 180pt
+}
+.c1 {
+	height: 11pt
+}
+.c5 {
+	font-weight: bold
+}
+.title {
+	widows: 2;
+	padding-top: 0pt;
+	line-height: 1.15;
+	orphans: 2;
+	text-align: left;
+	color: #000000;
+	font-size: 21pt;
+	font-family: "Trebuchet MS";
+	padding-bottom: 0pt;
+	page-break-after: avoid
+}
+.subtitle {
+	widows: 2;
+	padding-top: 0pt;
+	line-height: 1.15;
+	orphans: 2;
+	text-align: left;
+	color: #666666;
+	font-style: italic;
+	font-size: 13pt;
+	font-family: "Trebuchet MS";
+	padding-bottom: 10pt;
+	page-break-after: avoid
+}
+li {
+	color: #000000;
+	font-size: 11pt;
+	font-family: "Arial"
+}
+p {
+	color: #000000;
+	font-size: 11pt;
+	margin: 0;
+	font-family: "Arial"
+}
+h1 {
+	widows: 2;
+	padding-top: 10pt;
+	line-height: 1.15;
+	orphans: 2;
+	text-align: left;
+	color: #000000;
+	font-size: 16pt;
+	font-family: "Trebuchet MS";
+	padding-bottom: 0pt;
+	page-break-after: avoid
+}
+h2 {
+	widows: 2;
+	padding-top: 10pt;
+	line-height: 1.15;
+	orphans: 2;
+	text-align: left;
+	color: #000000;
+	font-size: 13pt;
+	font-family: "Trebuchet MS";
+	font-weight: bold;
+	padding-bottom: 0pt;
+	page-break-after: avoid
+}
+h3 {
+	widows: 2;
+	padding-top: 8pt;
+	line-height: 1.15;
+	orphans: 2;
+	text-align: left;
+	color: #666666;
+	font-size: 12pt;
+	font-family: "Trebuchet MS";
+	font-weight: bold;
+	padding-bottom: 0pt;
+	page-break-after: avoid
+}
+h4 {
+	widows: 2;
+	padding-top: 8pt;
+	line-height: 1.15;
+	orphans: 2;
+	text-align: left;
+	color: #666666;
+	font-size: 11pt;
+	text-decoration: underline;
+	font-family: "Trebuchet MS";
+	padding-bottom: 0pt;
+	page-break-after: avoid
+}
+h5 {
+	widows: 2;
+	padding-top: 8pt;
+	line-height: 1.15;
+	orphans: 2;
+	text-align: left;
+	color: #666666;
+	font-size: 11pt;
+	font-family: "Trebuchet MS";
+	padding-bottom: 0pt;
+	page-break-after: avoid
+}
+h6 {
+	widows: 2;
+	padding-top: 8pt;
+	line-height: 1.15;
+	orphans: 2;
+	text-align: left;
+	color: #666666;
+	font-style: italic;
+	font-size: 11pt;
+	font-family: "Trebuchet MS";
+	padding-bottom: 0pt;
+	page-break-after: avoid
+}
+</style>
+</head>
+<body class="c10">
+<p class="c0"><span class="c5">&shy;&shy;&shy;&shy;&shy;Parameters</span></p>
+<ul class="c3 lst-kix_cyih6ec3xvse-0 start">
+  <li class="c0 c2"><span>mu - Population Size (# of test suites) &ndash; likely small ~10 to 50</span></li>
+  <li class="c0 c2"><span>initial Test Suite Size</span></li>
+</ul>
+<ul class="c3 lst-kix_cyih6ec3xvse-1 start">
+  <li class="c0 c7"><span>This should probably be a function of the complexity of the control flow graph</span></li>
+</ul>
+<ul class="c3 lst-kix_cyih6ec3xvse-0">
+  <li class="c0 c2"><span>maximum number of test cases allowed in a test suite</span></li>
+</ul>
+<ul class="c3 lst-kix_cyih6ec3xvse-1 start">
+  <li class="c0 c7"><span>This should probably also be a function of the complexity of the control flow graph</span></li>
+</ul>
+<ul class="c3 lst-kix_cyih6ec3xvse-0">
+  <li class="c0 c2"><span>How many cut points to use in test suite crossover</span></li>
+  <li class="c0 c2"><span>How many cut points to use in test case crossover</span></li>
+  <li class="c0 c2"><span>Crossover probability for test suites</span></li>
+  <li class="c0 c2"><span>Crossover probability for test cases</span></li>
+  <li class="c0 c1 c2"><span></span></li>
+</ul>
+<p class="c0 c1"><span></span></p>
+<p class="c0"><span class="c5">Algorithm</span></p>
+<ol class="c3 lst-kix_4ye8h1scvkhq-0 start" start="1">
+  <li class="c0 c2"><span>Initialization</span></li>
+</ol>
+<ol class="c3 lst-kix_4ye8h1scvkhq-1 start" start="1">
+  <li class="c0 c7"><span>Generate mu test suites of size initialTestSuiteSize randomly and add them to the population</span></li>
+  <li class="c0 c7"><span>Evaluate the fitness of each test suite</span></li>
+</ol>
+<ol class="c3 lst-kix_4ye8h1scvkhq-2 start" start="1">
+  <li class="c0 c6"><span>Evaluate the paths covered by each of the test cases and map each test case to a path (sequence of conditions in the CFG)</span></li>
+  <li class="c0 c6"><span>Determine fitness based upon a measure of how many paths out of total paths are covered. And some other factors.</span></li>
+</ol>
+<ol class="c3 lst-kix_4ye8h1scvkhq-0" start="2">
+  <li class="c0 c2"><span>While(stopping criteria has not been met)</span></li>
+</ol>
+<ol class="c3 lst-kix_4ye8h1scvkhq-1 start" start="1">
+  <li class="c0 c7"><span>Choose two parents using fitness proportional selection</span></li>
+  <li class="c0 c7"><span>Apply test suite level crossover to generate two offspring test suites</span></li>
+  <li class="c0 c7"><span>Foreach offspring test suite</span></li>
+</ol>
+<ol class="c3 lst-kix_4ye8h1scvkhq-2 start" start="1">
+  <li class="c0 c6"><span>Foreach test case in an offspring</span></li>
+</ol>
+<ol class="c3 lst-kix_4ye8h1scvkhq-3 start" start="1">
+  <li class="c0 c9"><span>Flip a coin</span><span>&nbsp;with probability SelectTCProb</span></li>
+  <li class="c0 c9"><span>If heads,</span></li>
+</ol>
+<ol class="c3 lst-kix_4ye8h1scvkhq-4 start" start="1">
+  <li class="c0 c4"><span>Add to pool of test cases to apply crossover and mutation to</span></li>
+</ol>
+<ol class="c3 lst-kix_4ye8h1scvkhq-3" start="3">
+  <li class="c0 c9"><span>For each pair of test cases in the pool</span></li>
+</ol>
+<ol class="c3 lst-kix_4ye8h1scvkhq-4 start" start="1">
+  <li class="c0 c4"><span>Apply test case level crossover</span></li>
+</ol>
+<ol class="c3 lst-kix_4ye8h1scvkhq-5 start" start="1">
+  <li class="c0 c8"><span>Crossover entire parameters. Need to decide how we are deciding number of cut points</span></li>
+</ol>
+<ol class="c3 lst-kix_4ye8h1scvkhq-4" start="2">
+  <li class="c0 c4"><span>Apply parameter level mutation to both offspring</span></li>
+  <li class="c0 c4"><span>Foreach parameter</span></li>
+</ol>
+<ol class="c3 lst-kix_4ye8h1scvkhq-5 start" start="1">
+  <li class="c0 c8"><span>Flip a coin with probability ParamMutProb</span></li>
+  <li class="c0 c8"><span>If heads, mutate the parameter</span></li>
+</ol>
+<ol class="c3 lst-kix_4ye8h1scvkhq-4" start="4">
+  <li class="c0 c4"><span>Evaluate the paths of both offspring test cases. Keep them in the test suite iff it covers a previously uncovered path</span></li>
+</ol>
+<ol class="c3 lst-kix_4ye8h1scvkhq-1" start="4">
+  <li class="c0 c7"><span>Evaluate the fitness of each offspring test suite</span></li>
+  <li class="c0 c7"><span>Replace one or both of the parent test suites if improvement has been made</span></li>
+</ol>
+<p class="c0"><span>&nbsp;</span></p>
+<p class="c0 c1"><span></span></p>
+<p class="c0 c1"><span></span></p>
+<p class="c0 c1"><span></span></p>
+<p class="c0"><span class="c5">Encoding</span></p>
+<ol class="c3 lst-kix_4lzsqi76z49q-0 start" start="1">
+  <li class="c0 c2"><span>An entire test suite can just be a binary string since the input parameters are all fixed sizes, and thus test cases are fixed sizes as well. The only issue we may have is allowing it to grow.</span></li>
+</ol>
+<ol class="c3 lst-kix_4lzsqi76z49q-1 start" start="1">
+  <li class="c0 c7"><span>We could but might not be worth the hastle. I assume we&rsquo;ll need to store a good bit of metadata along with the test suite and test cases such as what paths they cover, maybe fitness contributions of each test case so that fitness of offspring suites can be a quick update of only those that changed instead of re-evaluating the whole thing. </span></li>
+</ol>
+<ol class="c3 lst-kix_4lzsqi76z49q-0" start="2">
+  <li class="c0 c2"><span>Gray encoding for integers</span></li>
+</ol>
+<p class="c0 c1"><span></span></p>
+<p class="c0"><span class="c5">Fitness</span></p>
+<ol class="c3 lst-kix_vcss4o98e1kx-0 start" start="1">
+  <li class="c0 c2"><span>This will need to take into account several things</span></li>
+</ol>
+<ol class="c3 lst-kix_vcss4o98e1kx-1 start" start="1">
+  <li class="c0 c7"><span>A test suites coverage</span></li>
+  <li class="c0 c7"><span>Number of repeated test cases in a test suite</span></li>
+  <li class="c0 c7"><span>Perhaps how close repeated test cases are to uncovered paths</span></li>
+</ol>
+<p class="c0 c1"><span></span></p>
+<p class="c0"><span class="c5">Selection</span></p>
+<ol class="c3 lst-kix_gd64awj5m656-0 start" start="1">
+  <li class="c0 c2"><span>Scaled fitness proportional selection</span></li>
+  <li class="c0 c2"><span>We could also try tournament selection</span></li>
+</ol>
+<p class="c0 c1"><span></span></p>
+<p class="c0"><span class="c5">Crossover</span></p>
+<ol class="c3 lst-kix_uzinwce9ko7-0 start" start="1">
+  <li class="c0 c2"><span>Test suite crossover</span></li>
+  <li class="c0 c2"><span>Test case crossover</span></li>
+  <li class="c0 c2"><span>I stated before that i think our algorithm will have a lot of trouble finded new test cases without using information of the programs predicates; as such, do you think it would help to also have parameter level crossover?</span></li>
+</ol>
+<p class="c0 c1"><span></span></p>
+<p class="c0"><span class="c5">Mutation</span></p>
+<ol class="c3 lst-kix_diqhvomtzrki-0 start" start="1">
+  <li class="c0 c2"><span>Test suite mutation</span></li>
+</ol>
+<ol class="c3 lst-kix_diqhvomtzrki-1 start" start="1">
+  <li class="c0 c7"><span>Is this going to do something like add or remove a test case?</span></li>
+</ol>
+<ol class="c3 lst-kix_diqhvomtzrki-0" start="2">
+  <li class="c0 c2"><span>Test cases mutation</span></li>
+  <li class="c0 c2"><span>Parameter mutation? (See crossover point 3)</span></li>
+</ol>
+<p class="c0 c1"><span></span></p>
+<p class="c0"><span class="c5">Local Optimization</span></p>
+<ol class="c3 lst-kix_1sh77oofk6si-0 start" start="1">
+  <li class="c0 c2"><span>We should discuss this more with </span><span>Dr. El Ariss</span><span>, but possibly something with bees</span></li>
+</ol>
+<p class="c0 c1"><span class="c5"></span></p>
+<p class="c0"><span class="c5">Replacement</span></p>
+<ol class="c3 lst-kix_awmqxhv10twn-0 start" start="1">
+  <li class="c0 c2"><span>I assume we will be using a steady state GA so we will only need to replace one or two organisms during this phase.</span></li>
+</ol>
+<p class="c0 c1"><span></span></p>
+<p class="c0"><span class="c5">Stopping Condition</span></p>
+<ol class="c3 lst-kix_s0rtrjrn3fih-0 start" start="1">
+  <li class="c0 c2"><span>A test suite is found that covers all paths</span></li>
+  <li class="c0 c2"><span>A test suite can be built from existing test cases that covers all paths</span></li>
+  <li class="c0 c2"><span>A large number of generations</span></li>
+  <li class="c0 c2"><span>A certain number of generations passes with no substantial increases in fitness</span></li>
+</ol>
+<p class="c0 c1"><span class="c5"></span></p>
+<p class="c0"><span class="c5">Implementation</span></p>
+<ol class="c3 lst-kix_xp146zofsugl-0 start" start="1">
+  <li class="c0 c2"><span>Create a class diagram to aid development</span></li>
+  <li class="c0 c2 c1"><span></span></li>
+</ol>
+</body>
+</html>
