@@ -36,10 +36,34 @@
         -->
         <tr>
             <td width=15% height = auto> <p style ="text-align:center"><b> Date </b> </td>
-            <td width = 75% height = auto> <p style ="text-align:center"><b> Notes <b> </td>
+            <td width = 75% height = auto> <p style ="text-align:center"><strong><b> Notes <b> </strong></td>
         </tr>
         
         
+        <tr>
+          <td height = auto><span style="color:#FF0000 ">Thursday 3/26</td>
+          <td height = auto>Rewrote two of the local optimization functions. We were not satisfied with how they were working nor how they looked. The ideal behind each of them stayed the same we just made them a little smarter.<br>
+          <br>
+          Implemented a new fitness function based on population metadata. This rewards organism that cover rare edges and penalizes organisms that cover very common edges.<br>
+          <br>
+          With the new local optimizations and the new fitness function the simulation is getting about 50% coverage on the hardest control flow graph.<br>
+          <br>
+          <strong>There will be few or no updates until after 3/31 as we are preparing for our presentation on clonal selection and fuzzy clustering.</strong></td>
+        </tr>
+        <tr>
+          <td height = auto><span style="color:#FF0000 ">Wensday 3/25</td>
+          <td height = auto>Added a significantly harder control flow graph. This new graph has 78 edges and about 180 predicates. This control flow graph represents a program that would take ten integer inputs and use various derived information from these inputs in increasingly complex ways. For example, one branch in the control flow graph looks at the standard deviation and the mean of the inputs and starts narrow the range down through succesive predicates. Right now the simulation only gets around 20% coverage. </td>
+        </tr>
+        <tr>
+          <td height = auto><span style="color:#FF0000 ">Tuesday 3/24</td>
+          <td height = auto><p>Added a minimization function. This function is called at the end of a simulation and trys to create a test suite with the minimun number of test cases to cover everything in the control flow graph. In a production enviroment this would be useful for software testers by allowing them to get full coverage with a small number of test cases.<br>
+            <br>
+          We also made the design decision to make all test suites the same size. We did not seem to be getting any additional benefit from variable length test suites; all it did was make the fitness function much more complex. After making this design decision we went ahead and removed the code that made the test suites variable lengths.</p></td>
+        </tr>
+        <tr>
+          <td height = auto><span style="color:#FF0000 ">Sunday 3/22</td>
+          <td height = auto><p>Added two methods of adapting mutation probability. One lowers the mutation rate for everyone as the populations coverage ratio increases. The other adapts mutation for a specific organism by increases the mutation rate if the organism covers edges already covered by the population and lowering the mutation if it covers rare edges.</p></td>
+        </tr>
         <tr>
           <td height = auto>Saturday 3/21</td>
           <td height = auto>Added a new control flow graph that represents the classic Triangle Program from software testing. This graph is moderatly more difficult to cover then the others because it has about 20 predicates but is till not that challenging. We would like to add at least one more control flow graph that would represent a real challenge to our algorithm. </td>
