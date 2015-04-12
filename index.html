@@ -41,7 +41,42 @@
         
         
         <tr>
-          <td height = auto><span style="color:#FF0000 ">Thursday 3/26</td>
+          <td height = auto><span style="color:#FF0000 ">Sunday 4/12</td>
+          <td height = auto>Implemented fitness sharing for edges and predicates. Right now the initial fitness for each edge and predicate is the same but we may adapt this to give a bigger fitness for harder edges and predicates.</td>
+        </tr>
+        <tr>
+          <td height = auto><span style="color:#FF0000 ">Saturday 4/11</td>
+          <td height = auto>Implemented some simple adaptation of the ranges. This seems to have provided some benefit as the simulation can now reach 15-20% coverage without the help of any of the local opt functions.</td>
+        </tr>
+        <tr>
+          <td height = auto><span style="color:#FF0000 ">Friday 4/10</td>
+          <td height = auto><p>We met with Dr. El Ariss and Dr. Bui together to discuss ways to keep our algorithm focused on the problem and improve its ability to find test cases. Some of the highlights from this discussion that we plan to implement are listed below.</p>
+            <ul>
+              <li>The simulation must adapt the parameter ranges while it is running. This means it must learn where the good ranges are.</li>
+              <li>To help learn the useful ranges keep track of what test cases fall in each range and narrow in on the succesful ranges.</li>
+              <li>Fitness sharing for edges and predicates</li>
+              <li>In crossover try a fixed value for <em>k</em> of 1 or 2. Or, if we choose to adapt it based on input size then we should keep it conservative.</li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td height = auto><span style="color:#FF0000 ">Thursday 4/9</td>
+          <td height = auto>We were worried that we took a misstep in our project and were solving a problem other then the one we set out to solve in our original problem statement, so we met with Dr. Bui to discuss this. It seems we were not as far off base as we thought, but we all decided to meet again with Dr. El Ariss to discuss it further.</td>
+        </tr>
+        <tr>
+          <td height = auto><span style="color:#FF0000 ">Tuesday 4/7</td>
+          <td height = auto>We had concerns about the inability of our algorithm to find new test cases, particularly when the input domain was large, so we met with Dr. El Ariss to discuss this. Since the size of the input domain seemed to be an issue he suggested finding some method to narrow down the range as the simulation ran.</td>
+        </tr>
+        <tr>
+          <td height = auto><span style="color:#FF0000 ">Saturday 4/4</td>
+          <td height = auto><p>Since the simulation seems to be having trouble finding good test cases we implemented a test case operator as well. </p>
+          <p>Additionally, we implemented tournament selection and a new type of test suite crossover. The new test suite crossover only produces one child and pulls more test cases from the higher fitness parent. We just implemented both of these to experiment with and may not keep either of them.</p></td>
+        </tr>
+        <tr>
+          <td height = auto><span style="color:#FF0000 ">Friday 4/3</td>
+          <td height = auto>After discussing several new methods of generating the initial population we decided to try to generate by dividing the input domain up into ranges and pulling at least one test case from each. We were able to implement this today as well. </td>
+        </tr>
+        <tr>
+          <td height = auto>Thursday 3/26</td>
           <td height = auto>Rewrote two of the local optimization functions. We were not satisfied with how they were working nor how they looked. The ideal behind each of them stayed the same we just made them a little smarter.<br>
           <br>
           Implemented a new fitness function based on population metadata. This rewards organism that cover rare edges and penalizes organisms that cover very common edges.<br>
@@ -51,17 +86,17 @@
           <strong>There will be few or no updates until after 3/31 as we are preparing for our presentation on clonal selection and fuzzy clustering.</strong></td>
         </tr>
         <tr>
-          <td height = auto><span style="color:#FF0000 ">Wensday 3/25</td>
+          <td height = auto>Wensday 3/25</td>
           <td height = auto>Added a significantly harder control flow graph. This new graph has 78 edges and about 180 predicates. This control flow graph represents a program that would take ten integer inputs and use various derived information from these inputs in increasingly complex ways. For example, one branch in the control flow graph looks at the standard deviation and the mean of the inputs and starts narrow the range down through succesive predicates. Right now the simulation only gets around 20% coverage. </td>
         </tr>
         <tr>
-          <td height = auto><span style="color:#FF0000 ">Tuesday 3/24</td>
+          <td height = auto>Tuesday 3/24</td>
           <td height = auto><p>Added a minimization function. This function is called at the end of a simulation and trys to create a test suite with the minimun number of test cases to cover everything in the control flow graph. In a production enviroment this would be useful for software testers by allowing them to get full coverage with a small number of test cases.<br>
             <br>
           We also made the design decision to make all test suites the same size. We did not seem to be getting any additional benefit from variable length test suites; all it did was make the fitness function much more complex. After making this design decision we went ahead and removed the code that made the test suites variable lengths.</p></td>
         </tr>
         <tr>
-          <td height = auto><span style="color:#FF0000 ">Sunday 3/22</td>
+          <td height = auto>Sunday 3/22</td>
           <td height = auto><p>Added two methods of adapting mutation probability. One lowers the mutation rate for everyone as the populations coverage ratio increases. The other adapts mutation for a specific organism by increases the mutation rate if the organism covers edges already covered by the population and lowering the mutation if it covers rare edges.</p></td>
         </tr>
         <tr>
